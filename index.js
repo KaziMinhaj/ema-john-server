@@ -29,6 +29,11 @@ client.connect(err => {
   })
 
   //data lode from mongodb
+  app.get('/',(req,res) => {
+        res.send(`Welcome to Ema-John-Server
+        Author: Kazi MD Minhajul Haider
+        `)
+})
   app.get('/products',(req,res) => {
       productsCollection.find({}).toArray((err,documents)=>{
           res.send(documents)
