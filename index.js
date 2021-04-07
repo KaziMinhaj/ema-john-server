@@ -59,6 +59,4 @@ client.connect(err => {
 })
 });
 
-app.listen(5000, () => {
-  console.log(`Ema-John-Server listening at http://localhost:5000`)
-})
+app.listen(process.env.PORT ||5000)
